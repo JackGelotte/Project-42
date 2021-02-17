@@ -1,53 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/main.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header>
-      <img src="img/logga.png" id="header-icon">
-        <h1>Get Lyric</h1>
-        <hr class="header-line">
-    </header>
 
-    <div class="content">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <title>Lyric</title>
+</head>
 
-      <div class="content__nav-convert">
-        <p>Write your own text</p>
+<body>
+  <header class="header">
+    <img src="img/logga.png" class="header__logo" />
+    <h1>Get Lyric</h1>
+  </header>
+  <hr class="header-line" />
+
+  <div class="main">
+    <div class="main__left"></div>
+    <div class="main__content">
+      <p>Find song by entering title, artist or part of lyrics...</p>
+      <div class="main__content__searchBar">
+        <input type="search" id="search-field" name="q" placeholder="Input..." />
+        <button id="search-button" type="submit" value="enter">
+          <p>Search</p>
+        </button>
       </div>
-      <div class="content__nav-convert-with-lyrics">
-        <p>Convert Lyrics</p>
-      </div>
 
-      <div class="content__search-container">
-        <p>Find song by entering title, artist or part of lyrics...</p>
-        <input type="search" id="search-field" name="q" placeholder="Input...">
-        <button id="search-button" type="submit" value="enter"><p>Search</p></button>
 
-        <div class="content__search-container__search-result">
-          <h2 id="search-title">Titel sökning</h2>
-          <div class="content__search-container__search-result__title-links">
-            <a href="">Suggestion 1</a>
-            <a href="">Suggestion 2</a>
-            <a href="">Suggestion 3</a>
-          </div>
+      <div class="main__content__search-result">
+        <h2 id="search-title">Titel sökning</h2>
+        <div class="main__content__search-result__title-links">
+          <a href="">Suggestion 1</a>
+          <a href="">Suggestion 2</a>
+          <a href="">Suggestion 3</a>
+        </div>
 
-          <div class="content__search-container__search-result__lyrics-container">
-            <p id="lyrics">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-              Obcaecati, quidem cum tempora doloremque repellat soluta quam laboriosam officiis, 
-              suscipit saepe illum quae culpa optio tenetur ratione itaque dicta dolorum ad.
-            </p>
-          </div>
+        <div class="main__content__search-result__lyrics-container">
+          <p id="lyrics">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Obcaecati, quidem cum tempora doloremque repellat soluta quam
+            laboriosam officiis, suscipit saepe illum quae culpa optio tenetur
+            ratione itaque dicta dolorum ad. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non temporibus,
+            voluptatibus vitae eius perferendis iste nihil obcaecati consequatur amet repellat nulla totam, fugit
+            tenetur doloremque adipisci sint rem ratione qui.
+          </p>
         </div>
       </div>
     </div>
-    <footer>
-      <a href="https://github.com/JackGelotte/Project-42">Link to Github</a>
-    </footer>
-  </body>
+    <div class="main__right">
+      <div class="main__right__nav-convert">
+        <button type="button"><a href="convert.html">Convert</a></button>
+      </div>
+      <div class="main__right__nav-convert-with-lyrics">
+        <button>qwertyy</button>
+
+      </div>
+    </div>
+
+
+
+  </div>
+  <footer>
+    <a href="https://github.com/JackGelotte/Project-42">Link to Github</a>
+  </footer>
+
+</body>
+
 </html>
