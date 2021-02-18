@@ -161,10 +161,16 @@ hr {
 }
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background: #4e4e4e;
   padding-right: 50px;
   padding-left: 50px;
   margin: 0 30px 0 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 footer a {

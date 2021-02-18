@@ -102,10 +102,12 @@ hr {
 }
 
 footer {
+  display: flex;
   background: $card-background-color;
   padding-right: 50px;
   padding-left: 50px;
   margin: 0 30px 0 30px;
+  justify-content: center;
 
   a {
     text-decoration: none;
