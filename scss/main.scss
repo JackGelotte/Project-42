@@ -1,71 +1,118 @@
 @import "variables", "globals";
 
 html {
-    background: $background-color;
+  background: $main-background-color;
 }
 
 body {
-    background: #373737;
-    max-width: 1300px;
-    margin: auto;
-    color: $text-color;
+  background: #373737;
+  max-width: 1300px;
+  margin: auto;
+  color: $text-color;
 }
 
 .header {
-    display: flex;
-    width: auto;
-    align-content: center;
-    justify-content: center;
+  display: flex;
+  width: auto;
+  align-content: center;
+  justify-content: center;
 
-    &__logo{
-        max-width: 150px;
- 
-    }
+  &__logo {
+    max-width: 150px;
+  }
 
-    h1 {
-        align-self: center;
-        font-size: 48px;
-    }
+  h1 {
+    align-self: center;
+    font-size: 48px;
+  }
 }
 
 hr {
-    margin: 0 30px 0 30px;
-    border-color:#7f7f7f;
+  margin: 0 30px 0 30px;
+  border-color: #7f7f7f;
 }
 
 .main {
+  display: flex;
+
+  &__functions {
+    min-width: 150px;
+    margin: 20px 30px 10px 30px;
+    background: $card-background-color;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+  }
+  &__content {
     display: flex;
-    &__left{
-        min-width: 150px;
-        margin: 20px 10px 10px 30px ;
-        background: chartreuse;
-    }
-    &__content {
-        display: flex;
-        flex-direction: column;
-        margin: 20px 10px 10px 10px;
-        background: crimson;
-        padding: 10px;
+    flex-direction: column;
+    margin: 20px 10px 10px 10px;
+    background: $card-background-color;
+    padding: 10px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+    min-width: 860px;
 
-        &__textArea {
-            background: white;
-            align-self: center;
-            padding: auto;
-        }
+    &__searchBar {
+      justify-self: center;
+      display: flex;
 
-        &__search-container{
-            display: flex;
-            &__searchBar{
-               justify-self: center;
-            }
-        }
+      &__input {
+        height: 40px;
+      }
+      &__submit {
+        height: 40px;
+      }
     }
-    &__right{
-        display: flex;
-        justify-content: flex-end;
-        flex-wrap: wrap;
-        min-width: 150px;
-        margin: 20px 30px 10px 10px ;
-        background: chocolate;
+
+    &__convertContainer {
+      display: flex;
+      flex-direction: row;
     }
+  }
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+    margin: 20px 30px 10px 30px;
+    background: $card-background-color;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+
+    &__nav-convert {
+      align-self: center;
+      margin-top: 10px;
+      width: 80%;
+    }
+
+    &__nav-convert-with-lyrics {
+      align-self: center;
+      margin-top: 10px;
+      width: 80%;
+    }
+  }
+}
+
+.textBox {
+  margin: 15px;
+  padding: 15px;
+  background-color: #414141;
+}
+
+.convert-buttons {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+footer {
+  background: $card-background-color;
+  padding-right: 50px;
+  padding-left: 50px;
+  margin: 0 30px 0 30px;
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    color: $text-color;
+  }
+  a:hover {
+    color: rgb(255, 255, 255);
+  }
 }

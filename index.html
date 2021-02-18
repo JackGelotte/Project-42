@@ -17,13 +17,13 @@
   <hr class="header-line" />
 
   <div class="main">
-    <div class="main__left"></div>
+    <div class="main__functions"></div>
     <div class="main__content">
       <p>Find song by entering title, artist or part of lyrics...</p>
       <div class="main__content__searchBar">
-        <input type="search" id="search-field" name="q" placeholder="Input..." />
-        <button id="search-button" type="submit" value="enter">
-          <p>Search</p>
+        <input type="text" id="searchBar" class="main__content__searchBar__input" placeholder="Enter stuff..." />
+        <button type="submit" id="searchBtn" class="main__content__searchBar__submit">
+          Submit
         </button>
       </div>
 
@@ -48,14 +48,11 @@
         </div>
       </div>
     </div>
-    <div class="main__right">
-      <div class="main__right__nav-convert">
-        <button type="button"><a href="convert.html">Convert</a></button>
-      </div>
-      <div class="main__right__nav-convert-with-lyrics">
-        <button>qwertyy</button>
+    <div class="main__nav">
 
-      </div>
+      <input type="button" onclick="location.href='convert.html'" class="main__nav__nav-convert" value="Convert">
+
+      <input type="button" onclick="location.href=''" class="main__nav__nav-convert-with-lyrics" value="asdf">
     </div>
 
 
