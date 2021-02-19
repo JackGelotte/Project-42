@@ -1,14 +1,21 @@
+'use strict';
 
 
+
+
+window.onload = function () {
+
+    document.querySelector('#jk').addEventListener('click', getJoke);
+}
 
 let baseURL = "https://v2.jokeapi.dev";
 let categories = ["Programming"];
 let params = ["idRange=0-100"];
 
-async function getJoke() {
-    let textB = document.querySelector('#lyrics');
-    let response = await fetch(`${baseURL}/joke/${categories.join(",")}?${params.join("&")}`)
 
+async function getJoke() {
+    let response = await fetch(`${baseURL}/joke/${categories.join(",")}?${params.join("&")}`)
+    let textB = document.querySelector('#textBox');
     if (response.ok) {
         let json = await response.json();
 
@@ -38,3 +45,4 @@ async function getLyric() {
         }
     }
 }
+document.querySelector('#jk');
