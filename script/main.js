@@ -6,4 +6,16 @@ window.onload = function () {
     searchBtn.onclick = function () {
         document.getElementById('lyrics').innerText = "";
     }
+
+
+
+
+
+
+
+
+
+
+
+
 }
