@@ -23,16 +23,45 @@ function getSong(searchWords, key) {
         .then(function (data) {
             console.log(data);
             console.log(data.response.docs[0].id);
-            let songId = data.response.docs[0].id;
-            getLyrics(songId, key);
+
+            // gör en array där alla låtar i sökningen läggs till
+            const songArr = [];
+            const length = data.response.docs.length;
+
+            for (let i = 0; i < length; i++) {
+                songArr.push(data.response.docs[i]);
+            }
+
+            // kallar på funktion som printar ut sökresultat
+            printSongResults(songArr, key, length);
         })
         .catch(function (error) {
             console.error(error.message);
         });
 }
 
-function getLyrics(songId, key) {
+function printSongResults(songArr, key, length) {
+    const titleLinks = document.getElementById('title-links');
 
+    for (let i = 0; i < length; i++) {
+        // hämtar ut song id
+        let songId = songArr[i].id;
+        // skapar en länk
+        let songLink = document.createElement('a');
+        // sätter id på länken för att kunna komma åt den
+        songLink.id = 'song-link' + i;
+        // sätter länkens text till låt-titel
+        songLink.innerText = songArr[i].title;
+        // placerar länken i länk-klassen
+        titleLinks.appendChild(songLink);
+        // lägger till click-event för specifik låt (som printar lyrics)
+        songLink.addEventListener('click', function () {
+            getLyrics(songId, key);
+        })
+    }
+}
+
+function getLyrics(songId, key) {
     fetch('https://api.vagalume.com.br/search.php?musid=' + songId + '&apikey=' + key)
         .then(function (response) {
             if (response.ok) {
