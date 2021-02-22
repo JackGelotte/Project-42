@@ -101,6 +101,33 @@ hr {
   height: 40px;
 }
 
+.main__content__search-result__title-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main__content__search-result__title-links a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 3px;
+}
+
+.main__content__search-result__title-links a:hover {
+  cursor: pointer;
+  color: chocolate;
+}
+
+.main__content__search-result__lyrics-container {
+  background-color: #414141;
+  padding: 10px;
+}
+
 .main__content__convertContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -182,4 +209,3 @@ footer a {
 footer a:hover {
   color: white;
 }
-/*# sourceMappingURL=main.css.map */

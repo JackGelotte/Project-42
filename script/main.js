@@ -44,6 +44,12 @@ function printSongResults(songArr, key, length) {
     const titleLinks = document.getElementById('title-links');
 
     for (let i = 0; i < length; i++) {
+        if (document.getElementById('song-link' + i) !== undefined) {
+            document.getElementById('song-link' + i).innerText = '';
+        }
+    }
+
+    for (let i = 0; i < length; i++) {
         // hämtar ut song id
         let songId = songArr[i].id;
         // skapar en länk
@@ -51,7 +57,7 @@ function printSongResults(songArr, key, length) {
         // sätter id på länken för att kunna komma åt den
         songLink.id = 'song-link' + i;
         // sätter länkens text till låt-titel
-        songLink.innerText = songArr[i].title;
+        songLink.innerText = songArr[i].band + ' - ' + songArr[i].title;
         // placerar länken i länk-klassen
         titleLinks.appendChild(songLink);
         // lägger till click-event för specifik låt (som printar lyrics)
@@ -70,8 +76,11 @@ function getLyrics(songId, key) {
             }
         })
         .then(function (data) {
+            console.log(data);
             console.log(data.mus[0].text);
+            document.getElementById('title-links').style.display = 'hidden';
             document.getElementById('lyrics').innerText = data.mus[0].text;
+            document.getElementById('search-title').innerText = data.mus[0].name;
         })
         .catch(function (error) {
             console.error(error.message);
