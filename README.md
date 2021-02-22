@@ -17,3 +17,4 @@ https://api.vagalume.com.br/docs/letras/#apidoc_howTo
 
 Joke API;
 https://v2.jokeapi.dev/#url-parameters
+https://api.chucknorris.io/#!
