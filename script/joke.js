@@ -5,15 +5,29 @@
 
 window.onload = function () {
 
-    document.querySelector('#jk').addEventListener('click', getJoke);
+
 }
 
-let baseURL = "https://v2.jokeapi.dev";
-let categories = ["Programming"];
-let params = ["idRange=0-100"];
+window.addEventListener('DOMContentLoaded', () => {
+    let cont = document.querySelector('#jokeApi');
+    cont.addEventListener('click', blabla, false);
+    function blabla(e) {
+        if (e.target !== e.currentTarget) {
+            if (e.target.id === 'chuck') {
+                chuckNorris();
+            } else {
+                jokeApi(e.target.id);
+            }
+        }
+        e.stopPropagation();
+    }
+})
 
-
-async function getJoke() {
+// https://v2.jokeapi.dev/
+async function jokeApi(category) {
+    let baseURL = "https://v2.jokeapi.dev";
+    let categories = [category];
+    let params = ["idRange=0-100"];
     let response = await fetch(`${baseURL}/joke/${categories.join(",")}?${params.join("&")}`)
     let textB = document.querySelector('#textBox');
     if (response.ok) {
@@ -29,7 +43,49 @@ async function getJoke() {
     }
 }
 
-async function getLyric() {
+
+
+// https://api.chucknorris.io/
+async function chuckNorris() {
+    let response = await fetch(`https://api.chucknorris.io/jokes/random`)
+    let textB = document.querySelector('#textBox');
+    let img = document.querySelector('#wat');
+    if (response.ok) {
+        let json = await response.json();
+        img.src = json.icon_url
+        textB.innerText = (json.value);
+    }
+}
+async function chuckList() {
+    let response = await fetch(`https://api.chucknorris.io/jokes/categories`);
+
+    if (response.ok) {
+        let json = await response.json();
+        let chuckBox = document.querySelector('#chuckBox');
+        console.log(json);
+
+        let select = document.createElement('select');
+        chuckBox.append(select);
+        let options = json;
+
+        for (let i = 0; i < options.length; i++) {
+            let opt = options[i];
+            let el = document.createElement('option');
+            el.textContent = opt;
+            el.value = opt;
+            select.add(el);
+        }
+    }
+}
+
+
+
+
+
+
+
+// om vi behöver
+/* async function getLyric() {
     const key = '4294483c1fa9e154b8920e88d4e076a4';
     let response = await fetch(`https://api.vagalume.com.br/search.excerpt?q=&limit=15&apikey=${key}`);
     if (response.ok) {
@@ -44,5 +100,4 @@ async function getLyric() {
             console.log(json2.mus[0].text);
         }
     }
-}
-document.querySelector('#jk');
+}*/
