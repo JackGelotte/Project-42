@@ -42,6 +42,7 @@ function getSong(searchWords, key) {
 
 function printSongResults(songArr, key, length) {
     const titleLinks = document.getElementById('title-links');
+    document.getElementById('search-title').innerText = '';
 
     for (let i = 0; i < length; i++) {
         if (document.getElementById('song-link' + i)) {
