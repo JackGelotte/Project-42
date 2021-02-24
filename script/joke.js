@@ -54,6 +54,8 @@ async function chuckNorris() {
         let json = await response.json();
         img.src = json.icon_url
         textB.innerText = json.value;
+
+        img.addEventListener('click', chuckList, { once: true });
     }
 }
 async function chuckList() {

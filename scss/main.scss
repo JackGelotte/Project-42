@@ -81,7 +81,7 @@ hr {
       }
       &__title-links a:hover {
         cursor: pointer;
-        color:chocolate;
+        color: chocolate;
       }
       &__lyrics-container {
         background-color: #414141;
@@ -97,6 +97,13 @@ hr {
     &__convertContainer {
       display: flex;
       flex-direction: row;
+    }
+
+    &__jokeContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   }
   &__nav {

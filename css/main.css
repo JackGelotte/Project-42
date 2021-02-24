@@ -60,17 +60,8 @@ hr {
 
 .main__content {
   display: flex;
-<<<<<<< HEAD
   flex-direction: column;
-=======
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
->>>>>>> aa3af1680bb0a5d9a2befe1e57fa8bc5c45c71d4
+  align-items: center;
   margin: 20px 10px 10px 10px;
   background: #4e4e4e;
   padding: 10px;
@@ -98,19 +89,12 @@ hr {
 }
 
 .main__content__search-result__title-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin: 15px;
 }
 
 .main__content__search-result__title-links a {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   margin: 3px;
 }
@@ -134,6 +118,13 @@ hr {
 .main__content__convertContainer {
   display: flex;
   flex-direction: row;
+}
+
+.main__content__jokeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .main__nav {
