@@ -60,7 +60,17 @@ hr {
 
 .main__content {
   display: flex;
+<<<<<<< HEAD
   flex-direction: column;
+=======
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+>>>>>>> aa3af1680bb0a5d9a2befe1e57fa8bc5c45c71d4
   margin: 20px 10px 10px 10px;
   background: #4e4e4e;
   padding: 10px;
@@ -68,9 +78,14 @@ hr {
   min-width: 860px;
 }
 
+.main__content p {
+  margin: 15px;
+}
+
 .main__content__searchBar {
   justify-self: center;
   display: flex;
+  margin: 15px;
 }
 
 .main__content__searchBar__input {
@@ -78,7 +93,42 @@ hr {
 }
 
 .main__content__searchBar__submit {
+  cursor: pointer;
   height: 40px;
+}
+
+.main__content__search-result__title-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 15px;
+}
+
+.main__content__search-result__title-links a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 3px;
+}
+
+.main__content__search-result__title-links a:hover {
+  cursor: pointer;
+  color: chocolate;
+}
+
+.main__content__search-result__lyrics-container {
+  background-color: #414141;
+  padding: 15px;
+  margin: 15px;
+  width: 820px;
+}
+
+.main__content__search-result__lyrics-container h2 {
+  margin: 15px;
 }
 
 .main__content__convertContainer {

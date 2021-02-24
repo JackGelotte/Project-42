@@ -44,21 +44,53 @@ hr {
   &__content {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 20px 10px 10px 10px;
     background: $card-background-color;
     padding: 10px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
     min-width: 860px;
 
+    & p {
+      margin: 15px;
+    }
+
     &__searchBar {
       justify-self: center;
       display: flex;
+      margin: 15px;
 
       &__input {
         height: 40px;
       }
       &__submit {
+        cursor: pointer;
         height: 40px;
+      }
+    }
+
+    &__search-result {
+      &__title-links {
+        display: flex;
+        flex-direction: column;
+        margin: 15px;
+      }
+      &__title-links a {
+        width: fit-content;
+        margin: 3px;
+      }
+      &__title-links a:hover {
+        cursor: pointer;
+        color:chocolate;
+      }
+      &__lyrics-container {
+        background-color: #414141;
+        padding: 15px;
+        margin: 15px;
+        width: 820px;
+        & h2 {
+          margin: 15px;
+        }
       }
     }
 
