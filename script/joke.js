@@ -10,8 +10,8 @@ window.onload = function () {
 
 window.addEventListener('DOMContentLoaded', () => {
     let cont = document.querySelector('#jokeApi');
-    cont.addEventListener('click', blabla, false);
-    function blabla(e) {
+    cont.addEventListener('click', btnEvent, false);
+    function btnEvent(e) {
         if (e.target !== e.currentTarget) {
             if (e.target.id === 'chuck') {
                 chuckNorris();
@@ -53,7 +53,7 @@ async function chuckNorris() {
     if (response.ok) {
         let json = await response.json();
         img.src = json.icon_url
-        textB.innerText = (json.value);
+        textB.innerText = json.value;
     }
 }
 async function chuckList() {
