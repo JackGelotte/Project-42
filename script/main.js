@@ -51,6 +51,8 @@ function printSongResults(songArr, key, length) {
     }
 
     for (let i = 0; i < length; i++) {
+        let band = songArr[i].band;
+        let song = songArr[i].title;
         // hämtar ut song id
         let songId = songArr[i].id;
         // skapar en länk
@@ -58,14 +60,35 @@ function printSongResults(songArr, key, length) {
         // sätter id på länken för att kunna komma åt den
         songLink.id = 'song-link' + i;
         // sätter länkens text till låt-titel
-        songLink.innerText = songArr[i].band + ' - ' + songArr[i].title;
+        songLink.innerText = band + ' - ' + song;
         // placerar länken i länk-klassen
         titleLinks.appendChild(songLink);
         // lägger till click-event för specifik låt (som printar lyrics)
         songLink.addEventListener('click', function () {
             getLyrics(songId, key);
+            embedVideo(band, song);
         })
     }
+}
+
+function embedVideo(band, song) {
+    const youtubeKey = 'AIzaSyAMElWV5YhXPfB9z_DVSlgYTN_GM-CzXrk';
+
+    fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=' + band + song + '&type=video&videoEmbeddable=true&key=' + youtubeKey)
+        .then(function (response) {
+            if (response.ok) {
+                console.log(response);
+                return response.json();
+            }
+        })
+        .then(function (data) {
+            console.log(data);
+            let videoId = data.items[0].id.videoId;
+            document.getElementById('video').src = 'https://www.youtube.com/embed/' + videoId;
+        })
+        .catch(function (error) {
+            console.error(error.message);
+        });
 }
 
 function getLyrics(songId, key) {
