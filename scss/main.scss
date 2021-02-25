@@ -105,6 +105,13 @@ hr {
       justify-content: center;
       align-items: center;
     }
+    .chuckBox {
+      display: flex;
+      select {
+        display: flex;
+        align-self: center;
+      }
+    }
   }
   &__nav {
     display: flex;

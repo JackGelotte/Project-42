@@ -58,6 +58,9 @@ async function chuckNorris() {
         img.addEventListener('click', chuckList, { once: true });
     }
 }
+
+
+
 async function chuckList() {
     let response = await fetch(`https://api.chucknorris.io/jokes/categories`);
 
@@ -77,11 +80,26 @@ async function chuckList() {
             el.value = opt;
             select.add(el);
         }
+        select.addEventListener('change', async () => {
+            let e = document.querySelector('select');
+            let value = e.options[e.selectedIndex].value;
+            let category = value;
+            let responseC = await fetch(`https://api.chucknorris.io/jokes/random?category=${category}`);
+            if (responseC.ok) {
+                let jsonC = await responseC.json();
+                let textB = document.querySelector('#textBox');
+                textB.innerText = jsonC.value;
+                console.log(jsonC.value)
+            }
+        })
     }
 }
 
 
+async function chuckCategory() {
 
+
+};
 
 
 

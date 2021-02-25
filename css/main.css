@@ -127,6 +127,15 @@ hr {
   align-items: center;
 }
 
+.main__content .chuckBox {
+  display: flex;
+}
+
+.main__content .chuckBox select {
+  display: flex;
+  align-self: center;
+}
+
 .main__nav {
   display: flex;
   flex-direction: column;
