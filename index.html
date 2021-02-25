@@ -13,16 +13,16 @@
 <body>
   <header class="header">
     <img src="img/logga.png" class="header__logo" />
-    <h1>Get Lyric</h1>
+    <h1>Sing Along Super Fun</h1>
   </header>
   <hr class="header-line" />
 
   <div class="main">
     <div class="main__functions"></div>
     <div class="main__content">
-      <p>Find song by entering title, or a part of the title...</p>
+      <h1>Find Song</h1>
       <div class="main__content__searchBar">
-        <input type="text" id="searchBar" class="main__content__searchBar__input" placeholder="Enter stuff..." />
+        <input type="text" id="searchBar" class="main__content__searchBar__input" placeholder="Enter Title..." />
         <button type="submit" id="searchBtn" class="main__content__searchBar__submit">
           Submit
         </button>
@@ -33,10 +33,10 @@
         <div class="main__content__search-result__title-links" id="title-links">
         </div>
 
-        <div class="main__content__search-result__lyrics-container">
+        <div class="main__content__search-result__lyrics-container" id="lyrics-container">
           <h2 id="search-title"></h2>
           <iframe width="420" height="315" src="" id="video" frameborder="0" gesture="media" allow="encrypted-media"
-            allowfullscreen="true">
+            allowfullscreen="true" allow="autoplay">
           </iframe>
           <p id="lyrics">
           </p>
@@ -44,17 +44,16 @@
       </div>
     </div>
     <div class="main__nav">
-
-      <input type="button" onclick="location.href='joke.html'" class="main__nav__nav-joke" value="joke">
-
-      <input type="button" onclick="location.href=''" class="main__nav__nav-joke-with-lyrics" value="asdf">
+      <button type="submit" onclick="location.href='joke.html'" class="main__nav__nav-joke">Joke</button>
     </div>
 
 
 
   </div>
   <footer>
-    <a href="https://github.com/JackGelotte/Project-42">Link to Github</a>
+    <p>Projekt Javascript | EC Utbildning VT21</p>
+    <p>Jack Gelotte & Isabella Pettersson</p>
+    <a href="https://github.com/JackGelotte/Project-42">https://github.com/JackGelotte/Project-42</a>
   </footer>
 
 </body>

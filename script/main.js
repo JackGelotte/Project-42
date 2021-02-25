@@ -65,6 +65,7 @@ function printSongResults(songArr, key, length) {
         titleLinks.appendChild(songLink);
         // lägger till click-event för specifik låt (som printar lyrics)
         songLink.addEventListener('click', function () {
+            document.querySelector('#lyrics-container').style.display = 'flex';
             getLyrics(songId, key);
             embedVideo(band, song);
         })
