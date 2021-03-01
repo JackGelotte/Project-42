@@ -42,7 +42,7 @@ hr {
 
 .main {
   display: flex;
-  min-height: 600px;
+  min-height: 560px;
 
   button {
     background-color: rgb(52, 119, 110);
@@ -79,27 +79,47 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     min-width: 150px;
-    margin: 20px 0px 10px 70px;
+    margin: 60px 0px 10px 70px;
+    background-color: rgba(165, 165, 165, 0.233);
+    border: none;
+    border-radius: 60px 0px 0px 60px;
+    height: 450px;
+    width: 150px;
 
-    button {
-      background-color: rgb(52, 119, 110);
+    &__knappy {
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(52, 119, 110, 0.795);
       border: none;
       border-radius: 60px 0px 0px 60px;
-      height: 650px;
+      height: 450px;
       width: 150px;
       color: $text-color;
       font-size: 30px;
       font-weight: bold;
       box-shadow: inset 1px 1px 5px 1px rgba(64,145,134,0.6), 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+      position: relative;
+      animation: slideInLeft 1s;
+      -webkit-animation: slideInLeft 1s;
+      -moz-animation: slideInLeft 1s;
+      -o-animation: slideInLeft 1s;
+      -ms-animation: slideInLeft 1s;
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: inset 1px 1px 5px 1px rgba(35,79,73,0.6), 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+      }
+
+      &:focus {
+        outline: none;
+      }
     }
-    button:hover {
-      cursor: pointer;
-      box-shadow: inset 1px 1px 5px 1px rgba(35,79,73,0.6), 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
-    }
-    button:focus {
-      outline: none;
-    }
+
+    
 
     &__index {
       position: relative;
@@ -114,11 +134,12 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px 0px 10px 0px;
+    margin: 60px 0px 0px 0px;
     background: $card-background-color;
     padding: 10px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
     min-width: 860px;
+    height: 450px;
 
     button {
       background-color: rgb(52, 119, 110);
@@ -174,27 +195,6 @@ hr {
         cursor: pointer;
         color: chocolate;
       }
-      &__lyrics-container {
-        display: none;
-        flex-direction: column;
-        justify-items: center;
-        align-items: center;
-        background-color: #414141;
-        padding: 15px;
-        margin: 15px;
-        width: 700px;
-        & h2 {
-          font-size: 36px;
-          margin: 20px;
-        }
-        & p {
-          font-size: 18px;
-          margin: 20px;
-        }
-        #video {
-          margin: 20px;
-        }
-      }
     }
 
     &__convertContainer {
@@ -221,46 +221,55 @@ hr {
     flex-direction: column;
     align-items: center;
     min-width: 150px;
-    margin: 20px 80px 10px 0px;
+    margin: 60px 0px 10px 0px;
+    background-color: rgba(165, 165, 165, 0.233);
+    border: none;
+    border-radius: 0px 60px 60px 0px;
+    height: 450px;
+    width: 150px;
 
-    button {
-      background-color: rgb(52, 119, 110);
+    &__knappy {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      background-color: rgb(119, 59, 55);
       border: none;
       border-radius: 0px 60px 60px 0px;
-      height: 650px;
+      height: 450px;
       width: 150px;
       color: $text-color;
       font-size: 30px;
       font-weight: bold;
-      box-shadow: inset 1px 1px 5px 1px rgba(64,145,134,0.6), 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
-    }
-    button:hover {
-      cursor: pointer;
-      border: none;
-      box-shadow: inset 1px 1px 5px 1px rgba(35,79,73,0.6), 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
-    }
-    button:focus {
-      outline: none;
-    }
-
-    &__nav-joke {
+      box-shadow: inset 1px 1px 5px 1px rgba(150, 84, 79, 0.6), 0 1px 1px rgba(119, 59, 55, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
       position: relative;
       animation: slideInRight 1s;
       -webkit-animation: slideInRight 1s;
       -moz-animation: slideInRight 1s;
       -o-animation: slideInRight 1s;
       -ms-animation: slideInRight 1s;
+
+      &:hover {
+        cursor: pointer;
+        border: none;
+        border-radius: 0px 60px 60px 0px;
+        box-shadow: inset 1px 1px 5px 1px rgba(82, 36, 33, 0.6), 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+      }
+
+      &:focus {
+        outline: none;
+      }
     }
   }
 }
 
 @keyframes slideInRight {
-  from {left: 40px;}
+  from {left: 60px;}
   to {left: 0px;}
 }
 
 @keyframes slideInLeft {
-  from {right: 40px;}
+  from {right: 60px;}
   to {right: 0px;}
 }
 
@@ -289,32 +298,6 @@ hr {
   100% {opacity:1;}
   }
 
-    &__knappy {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: rgb(52, 119, 110);
-      border: none;
-      border-radius: 10px;
-      height: 35px;
-      width: 115px;
-      margin: 15px;
-      color: $text-color;
-      font-size: 18px;
-      text-decoration: none;
-
-      &:hover {
-        cursor: pointer;
-        background-color: transparent;
-        border: none;
-        box-shadow: 0 0 3px 0 rgb(37, 37, 37) inset, 0 0 3px 1px rgb(20, 20, 20);
-      }
-
-      &:focus {
-        outline: none;
-      }
-    }
-    
 .textBox {
   width: 700px;
   margin: 15px;
@@ -326,6 +309,36 @@ hr {
   justify-content: space-around;
   flex-direction: column;
 }
+
+.song-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+
+  &__lyrics-container {
+    display: none;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    background-color: #414141;
+    padding: 15px;
+    margin: 15px;
+    width: 850px;
+    & h2 {
+      font-size: 36px;
+      margin: 20px;
+    }
+    & p {
+      font-size: 18px;
+      margin: 20px;
+    }
+    #video {
+      margin: 20px;
+    }
+  }
+}
+
 
 footer {
   display: flex;
