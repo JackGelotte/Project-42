@@ -12,6 +12,11 @@ body {
   max-width: 1300px;
   margin: auto;
   color: $text-color;
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
 }
 
 .header {
@@ -39,26 +44,6 @@ hr {
   display: flex;
   min-height: 600px;
 
-  button {
-    background-color: rgb(52, 119, 110);
-    border: none;
-    border-radius: 10px;
-    height: 35px;
-    width: 115px;
-    margin: 15px;
-    color: $text-color;
-    font-size: 18px;
-  }
-  button:hover {
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    box-shadow: 0 0 3px 0 rgb(37, 37, 37) inset, 0 0 3px 1px rgb(20, 20, 20);
-  }
-  button:focus {
-    outline: none;
-  }
-  
   input {
     background-color: transparent;
     margin: 15px;
@@ -71,20 +56,69 @@ hr {
   }
 
   &__functions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     min-width: 150px;
-    margin: 20px 30px 10px 30px;
-    background: $card-background-color;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+    margin: 20px 0px 10px 70px;
+
+    button {
+      background-color: rgb(52, 119, 110);
+      border: none;
+      border-radius: 60px 0px 0px 60px;
+      height: 650px;
+      width: 150px;
+      color: $text-color;
+      font-size: 30px;
+      font-weight: bold;
+      box-shadow: inset 1px 1px 5px 1px rgba(64,145,134,0.6), 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+    }
+    button:hover {
+      cursor: pointer;
+      box-shadow: inset 1px 1px 5px 1px rgba(35,79,73,0.6), 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+    }
+    button:focus {
+      outline: none;
+    }
+
+    &__index {
+      position: relative;
+      animation: slideInLeft 1s;
+      -webkit-animation: slideInLeft 1s;
+      -moz-animation: slideInLeft 1s;
+      -o-animation: slideInLeft 1s;
+      -ms-animation: slideInLeft 1s;
+    }
   }
   &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px 10px 10px 10px;
+    margin: 20px 0px 10px 0px;
     background: $card-background-color;
     padding: 10px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
     min-width: 860px;
+
+    button {
+      background-color: rgb(52, 119, 110);
+      border: none;
+      border-radius: 10px;
+      height: 35px;
+      width: 115px;
+      margin: 15px;
+      color: $text-color;
+      font-size: 18px;
+    }
+    button:hover {
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      box-shadow: 0 0 3px 0 rgb(37, 37, 37) inset, 0 0 3px 1px rgb(20, 20, 20);
+    }
+    button:focus {
+      outline: none;
+    }
 
     & p {
       margin: 15px;
@@ -167,23 +201,73 @@ hr {
     flex-direction: column;
     align-items: center;
     min-width: 150px;
-    margin: 20px 30px 10px 30px;
-    background: $card-background-color;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+    margin: 20px 80px 10px 0px;
 
-    &__nav-convert {
-      align-self: center;
-      margin-top: 10px;
-      width: 80%;
+    button {
+      background-color: rgb(52, 119, 110);
+      border: none;
+      border-radius: 0px 60px 60px 0px;
+      height: 650px;
+      width: 150px;
+      color: $text-color;
+      font-size: 30px;
+      font-weight: bold;
+      box-shadow: inset 1px 1px 5px 1px rgba(64,145,134,0.6), 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+    }
+    button:hover {
+      cursor: pointer;
+      border: none;
+      box-shadow: inset 1px 1px 5px 1px rgba(35,79,73,0.6), 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+    }
+    button:focus {
+      outline: none;
     }
 
-    &__nav-convert-with-lyrics {
-      align-self: center;
-      margin-top: 10px;
-      width: 80%;
+    &__nav-joke {
+      position: relative;
+      animation: slideInRight 1s;
+      -webkit-animation: slideInRight 1s;
+      -moz-animation: slideInRight 1s;
+      -o-animation: slideInRight 1s;
+      -ms-animation: slideInRight 1s;
     }
   }
 }
+
+@keyframes slideInRight {
+  from {left: 40px;}
+  to {left: 0px;}
+}
+
+@keyframes slideInLeft {
+  from {right: 40px;}
+  to {right: 0px;}
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
 
 .textBox {
   width: 700px;
