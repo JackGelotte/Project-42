@@ -96,12 +96,6 @@ async function chuckList() {
 }
 
 
-async function chuckCategory() {
-
-
-};
-
-
 
 
 // om vi behöver
