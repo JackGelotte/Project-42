@@ -1,14 +1,16 @@
 'use strict';
+import { transition } from './transitions.js';
 
 window.onload = function () {
+    transition();
     const searchBtn = document.getElementById('searchBtn');
     const key = '4294483c1fa9e154b8920e88d4e076a4';
-
     searchBtn.onclick = function () {
         document.getElementById('lyrics').innerText = "";
         const input = document.getElementById('searchBar').value;
         const searchWords = input.split(' ').join('%20');
         getSong(searchWords, key);
+
     }
 }
 

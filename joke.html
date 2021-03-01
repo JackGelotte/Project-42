@@ -5,12 +5,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/main.css">
-  <script src="script/joke.js"></script>
+  <link rel="stylesheet" href="./css/main.css">
+
   <title>joke</title>
 </head>
 
 <body>
+  <div class="transition is-active"></div>
+
   <header class="header">
     <img src="img/logga.png" class="header__logo" />
     <h1>Get it?</h1>
@@ -19,7 +21,7 @@
 
   <div class="main">
     <div class="main__nav">
-      <button type="submit" onclick="location.href='index.html'" class="main__nav__nav-joke">Index</button>
+      <button class="main__nav__nav-joke"><a href="index.html">Index</a></button>
     </div>
     <div class="main__content">
       <div class="main__content__jokeContainer">
@@ -52,7 +54,8 @@
     <p>Jack Gelotte & Isabella Pettersson</p>
     <a href="https://github.com/JackGelotte/Project-42">https://github.com/JackGelotte/Project-42</a>
   </footer>
-
+  <script type="module" src="script/main.js"></script>
+  <script type="module" src="script/joke.js"></script>
 </body>
 
 </html>

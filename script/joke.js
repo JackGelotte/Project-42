@@ -1,11 +1,10 @@
 'use strict';
 
-
+import { transition } from './transitions.js'
 
 
 window.onload = function () {
-
-
+    transition();
 }
 
 window.addEventListener('DOMContentLoaded', () => {

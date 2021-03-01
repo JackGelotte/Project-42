@@ -1,6 +1,6 @@
-@import "variables", "globals";
+@import "variables", "globals", "transitions";
 * {
-  font-family: 'Segoe UI light', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI light", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html {
@@ -58,7 +58,7 @@ hr {
   button:focus {
     outline: none;
   }
-  
+
   input {
     background-color: transparent;
     margin: 15px;
@@ -114,7 +114,7 @@ hr {
         font-size: 16px;
         font-weight: bold;
         width: 350px;
-        margin: 5px auto 5px auto ;
+        margin: 5px auto 5px auto;
       }
       &__title-links a:hover {
         cursor: pointer;
