@@ -219,16 +219,30 @@ hr {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
 }
 
-.main__nav__nav-convert {
-  align-self: center;
-  margin-top: 10px;
-  width: 80%;
+.main__nav__knappy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #34776e;
+  border: none;
+  border-radius: 10px;
+  height: 35px;
+  width: 115px;
+  margin: 15px;
+  color: #cfcfcf;
+  font-size: 18px;
+  text-decoration: none;
 }
 
-.main__nav__nav-convert-with-lyrics {
-  align-self: center;
-  margin-top: 10px;
-  width: 80%;
+.main__nav__knappy:hover {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  box-shadow: 0 0 3px 0 #252525 inset, 0 0 3px 1px #141414;
+}
+
+.main__nav__knappy:focus {
+  outline: none;
 }
 
 .textBox {

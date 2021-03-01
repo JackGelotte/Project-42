@@ -171,20 +171,33 @@ hr {
     background: $card-background-color;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
 
-    &__nav-convert {
-      align-self: center;
-      margin-top: 10px;
-      width: 80%;
-    }
+    &__knappy {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(52, 119, 110);
+      border: none;
+      border-radius: 10px;
+      height: 35px;
+      width: 115px;
+      margin: 15px;
+      color: $text-color;
+      font-size: 18px;
+      text-decoration: none;
 
-    &__nav-convert-with-lyrics {
-      align-self: center;
-      margin-top: 10px;
-      width: 80%;
+      &:hover {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        box-shadow: 0 0 3px 0 rgb(37, 37, 37) inset, 0 0 3px 1px rgb(20, 20, 20);
+      }
+
+      &:focus {
+        outline: none;
+      }
     }
   }
 }
-
 .textBox {
   width: 700px;
   margin: 15px;

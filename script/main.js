@@ -87,7 +87,7 @@ function embedVideo(band, song) {
         .then(function (data) {
             console.log(data);
             let videoId = data.items[0].id.videoId;
-            document.getElementById('video').src = 'https://www.youtube.com/embed/' + videoId;
+            document.getElementById('video').data = 'https://www.youtube.com/embed/' + videoId;
         })
         .catch(function (error) {
             console.error(error.message);
