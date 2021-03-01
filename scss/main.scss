@@ -1,6 +1,6 @@
-@import "variables", "globals";
+@import "variables", "globals", "transitions";
 * {
-  font-family: 'Segoe UI light', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI light", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html {
@@ -43,6 +43,26 @@ hr {
 .main {
   display: flex;
   min-height: 600px;
+
+  button {
+    background-color: rgb(52, 119, 110);
+    border: none;
+    border-radius: 10px;
+    height: 35px;
+    width: 115px;
+    margin: 15px;
+    color: $text-color;
+    font-size: 18px;
+  }
+  button:hover {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    box-shadow: 0 0 3px 0 rgb(37, 37, 37) inset, 0 0 3px 1px rgb(20, 20, 20);
+  }
+  button:focus {
+    outline: none;
+  }
 
   input {
     background-color: transparent;
@@ -148,7 +168,7 @@ hr {
         font-size: 16px;
         font-weight: bold;
         width: 350px;
-        margin: 5px auto 5px auto ;
+        margin: 5px auto 5px auto;
       }
       &__title-links a:hover {
         cursor: pointer;
@@ -269,6 +289,32 @@ hr {
   100% {opacity:1;}
   }
 
+    &__knappy {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(52, 119, 110);
+      border: none;
+      border-radius: 10px;
+      height: 35px;
+      width: 115px;
+      margin: 15px;
+      color: $text-color;
+      font-size: 18px;
+      text-decoration: none;
+
+      &:hover {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        box-shadow: 0 0 3px 0 rgb(37, 37, 37) inset, 0 0 3px 1px rgb(20, 20, 20);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+    
 .textBox {
   width: 700px;
   margin: 15px;

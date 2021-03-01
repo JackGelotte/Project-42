@@ -1,11 +1,10 @@
 'use strict';
 
-
+import { transition } from './transitions.js'
 
 
 window.onload = function () {
-
-
+    transition();
 }
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -94,12 +93,6 @@ async function chuckList() {
         })
     }
 }
-
-
-async function chuckCategory() {
-
-
-};
 
 
 

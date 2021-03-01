@@ -6,11 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./css/main.css" />
-  <script src="script/main.js"></script>
+
   <title>Lyric</title>
 </head>
 
 <body>
+  <div class="transition is-active"></div>
+
   <header class="header">
     <img src="img/logga.png" class="header__logo" />
     <h1>Sing Along Super Fun</h1>
@@ -35,16 +37,17 @@
 
         <div class="main__content__search-result__lyrics-container" id="lyrics-container">
           <h2 id="search-title"></h2>
-          <iframe width="420" height="315" src="" id="video" frameborder="0" gesture="media" allow="encrypted-media"
+          <object width="420" height="315" data="" id="video" frameborder="0" gesture="media" allow="encrypted-media"
             allowfullscreen="true" allow="autoplay">
-          </iframe>
+          </object>
           <p id="lyrics">
           </p>
         </div>
       </div>
     </div>
     <div class="main__nav">
-      <button type="submit" onclick="location.href='joke.html'" class="main__nav__nav-joke">RANDOM JOKES</button>
+      <a href="joke.html" class="main__nav__knappy">Joke</a>
+
     </div>
 
 
@@ -55,7 +58,7 @@
     <p>Jack Gelotte & Isabella Pettersson</p>
     <a href="https://github.com/JackGelotte/Project-42">https://github.com/JackGelotte/Project-42</a>
   </footer>
-
+  <script type="module" src="script/main.js"></script>
 </body>
 
 </html>

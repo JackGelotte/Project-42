@@ -1,14 +1,16 @@
 'use strict';
+import { transition } from './transitions.js';
 
 window.onload = function () {
+    transition();
     const searchBtn = document.getElementById('searchBtn');
     const key = '4294483c1fa9e154b8920e88d4e076a4';
-
     searchBtn.onclick = function () {
         document.getElementById('lyrics').innerText = "";
         const input = document.getElementById('searchBar').value;
         const searchWords = input.split(' ').join('%20');
         getSong(searchWords, key);
+
     }
 }
 
@@ -85,7 +87,7 @@ function embedVideo(band, song) {
         .then(function (data) {
             console.log(data);
             let videoId = data.items[0].id.videoId;
-            document.getElementById('video').src = 'https://www.youtube.com/embed/' + videoId;
+            document.getElementById('video').data = 'https://www.youtube.com/embed/' + videoId;
         })
         .catch(function (error) {
             console.error(error.message);
