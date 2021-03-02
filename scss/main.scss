@@ -8,9 +8,9 @@ html {
 }
 
 body {
-  background: #373737;
   max-width: 1300px;
   margin: auto;
+  background: #373737;
   color: $text-color;
   animation: fadeIn ease 1s;
   -webkit-animation: fadeIn ease 1s;
@@ -21,9 +21,9 @@ body {
 
 .header {
   display: flex;
-  width: auto;
   align-content: center;
   justify-content: center;
+  width: auto;
 
   &__logo {
     max-width: 150px;
@@ -45,35 +45,37 @@ hr {
   min-height: 560px;
 
   button {
-    background-color: rgb(52, 119, 110);
-    border: none;
-    border-radius: 10px;
-    font-weight: bold;
     height: 35px;
     width: 115px;
     margin: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(52, 119, 110);
     color: $text-color;
     font-size: 18px;
+    font-weight: bold;    
   }
+
   button:hover {
-    cursor: pointer;
-    background-color: transparent;
     border: none;
     box-shadow: 0 0 3px 0 rgb(37, 37, 37) inset, 0 0 3px 1px rgb(20, 20, 20);
+    background-color: transparent;
+    cursor: pointer;
   }
+
   button:focus {
     outline: none;
   }
 
   input {
+    height: 35px;
     background-color: transparent;
     margin: 15px;
-    height: 35px;
-    font-size: 18px;
-    font-weight: bold;
     padding: 10px;
     color: $text-color;
-
+    font-size: 18px;
+    font-weight: bold;
+    
     &:focus {
       outline: none;
     }
@@ -87,82 +89,80 @@ hr {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 150px;
-    margin: 60px 0px 10px 70px;
-    background-color: rgba(165, 165, 165, 0.233);
-    border: none;
-    border-radius: 60px 0px 0px 60px;
     height: 450px;
     width: 150px;
+    margin: 60px 0px 10px 70px;
+    border: none;
+    border-radius: 60px 0px 0px 60px;
+    background-color: rgba(165, 165, 165, 0.233);
 
     &__knappy {
-      text-decoration: none;
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: rgba(52, 119, 110, 0.795);
-      border: none;
-      border-radius: 60px 0px 0px 60px;
       height: 450px;
       width: 150px;
+      border: none;
+      border-radius: 60px 0px 0px 60px;
+      box-shadow: inset 1px 1px 5px 1px rgba(64,145,134,0.6), 
+                  0 1px 1px rgba(0, 0, 0, 0.16), 
+                  0 3px 10px 0 rgba(0, 0, 0, 0.15);
+      background-color: rgba(52, 119, 110, 0.795);
       color: $text-color;
       font-size: 30px;
       font-weight: bold;
-      box-shadow: inset 1px 1px 5px 1px rgba(64,145,134,0.6), 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
-      position: relative;
-      animation: slideInLeft 1s;
-      -webkit-animation: slideInLeft 1s;
-      -moz-animation: slideInLeft 1s;
-      -o-animation: slideInLeft 1s;
-      -ms-animation: slideInLeft 1s;
+      text-decoration: none;
+      animation: slideInRight 1.5s;
+      -webkit-animation: slideInRight 1.5s;
+      -moz-animation: slideInRight 1.5s;
+      -o-animation: slideInRight 1.5s;
+      -ms-animation: slideInRight 1.5s;
 
       &:hover {
+        box-shadow: inset 1px 1px 5px 1px rgba(35,79,73,0.6), 
+                    0 1px 1px rgba(0, 0, 0, 0.16), 
+                    0 3px 10px 0 rgba(0, 0, 0, 0.15);
         cursor: pointer;
-        box-shadow: inset 1px 1px 5px 1px rgba(35,79,73,0.6), 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
       }
 
       &:focus {
         outline: none;
       }
     }
-    &__index {
-      position: relative;
-      animation: slideInLeft 1s;
-      -webkit-animation: slideInLeft 1s;
-      -moz-animation: slideInLeft 1s;
-      -o-animation: slideInLeft 1s;
-      -ms-animation: slideInLeft 1s;
-    }
   }
+
   &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 860px;
+    height: 450px;
     margin: 60px 0px 0px 0px;
     padding: 10px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
-    min-width: 860px;
-    height: 450px;
     border: 20px solid rgb(78, 78, 78);
     background: linear-gradient(-45deg, rgba(131, 115, 113, 0.8), rgba(129, 119, 119, 0.8), rgba(126, 141, 140, 0.8), rgba(96, 122, 118, 0.8));
-	  background-size: 600% 600%;
-	  animation: gradient 4s ease-in-out infinite;
+    box-shadow: inset 1px 1px 3px 2px rgba(131, 131, 131, 0.6), 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+	  background-size: 500% 500%;
+	  animation: gradient 3s ease-in-out infinite;
 
     button {
-      background-color: rgb(45, 102, 94);
-      border: none;
-      border-radius: 10px;
       height: 35px;
       width: 115px;
       margin: 15px;
+      border: none;
+      border-radius: 10px;
+      background-color: rgb(45, 102, 94);
       color: $text-color;
       font-size: 18px;
     }
     button:hover {
-      cursor: pointer;
-      background-color: transparent;
       border: none;
-      box-shadow: 0 0 3px 0 rgb(37, 37, 37) inset, 0 0 3px 1px rgb(20, 20, 20);
+      box-shadow: inset 0 0 3px 0 rgb(37, 37, 37), 
+                  0 0 3px 1px rgb(20, 20, 20);
+                  background-color: transparent;
+      cursor: pointer;
     }
     button:focus {
       outline: none;
@@ -181,8 +181,8 @@ hr {
         height: 40px;
       }
       &__submit {
-        cursor: pointer;
         height: 40px;
+        cursor: pointer;
       }
     }
 
@@ -193,14 +193,14 @@ hr {
         margin: 15px;
       }
       &__title-links a {
-        font-size: 16px;
-        font-weight: bold;
         width: 350px;
         margin: 5px auto 5px auto;
+        font-size: 16px;
+        font-weight: bold;
       }
       &__title-links a:hover {
-        cursor: pointer;
         color: chocolate;
+        cursor: pointer;
       }
     }
 
@@ -227,40 +227,43 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 150px;
-    margin: 60px 0px 10px 0px;
-    background-color: rgba(165, 165, 165, 0.233);
-    border: none;
-    border-radius: 0px 60px 60px 0px;
     height: 450px;
     width: 150px;
+    margin: 60px 0px 10px 0px;
+    border: none;
+    border-radius: 0px 60px 60px 0px;
+    background-color: rgba(165, 165, 165, 0.233);
 
     &__knappy {
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      text-decoration: none;
-      background-color: rgb(119, 59, 55);
-      border: none;
-      border-radius: 0px 60px 60px 0px;
       height: 450px;
       width: 150px;
+      border: none;
+      border-radius: 0px 60px 60px 0px;
+      box-shadow: inset 1px 1px 5px 1px rgba(150, 84, 79, 0.6), 
+                  0 1px 1px rgba(119, 59, 55, 0.16), 
+                  0 3px 10px 0 rgba(0, 0, 0, 0.15);
+      background-color: rgb(119, 59, 55);
       color: $text-color;
       font-size: 30px;
       font-weight: bold;
-      box-shadow: inset 1px 1px 5px 1px rgba(150, 84, 79, 0.6), 0 1px 1px rgba(119, 59, 55, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
-      position: relative;
-      animation: slideInRight 1s;
-      -webkit-animation: slideInRight 1s;
-      -moz-animation: slideInRight 1s;
-      -o-animation: slideInRight 1s;
-      -ms-animation: slideInRight 1s;
+      text-decoration: none;
+      animation: slideInLeft 1.5s;
+      -webkit-animation: slideInLeft 1.5s;
+      -moz-animation: slideInLeft 1.5s;
+      -o-animation: slideInLeft 1.5s;
+      -ms-animation: slideInLeft 1.5s;
 
       &:hover {
-        cursor: pointer;
         border: none;
         border-radius: 0px 60px 60px 0px;
-        box-shadow: inset 1px 1px 5px 1px rgba(82, 36, 33, 0.6), 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+        box-shadow: inset 1px 1px 5px 1px rgba(82, 36, 33, 0.6),
+                    0 1px 1px rgba(0, 0, 0, 0.16), 
+                    0 3px 10px 0 rgba(0, 0, 0, 0.15);
+        cursor: pointer;
       }
 
       &:focus {
@@ -282,13 +285,12 @@ hr {
 	}
 }
 
-
-@keyframes slideInRight {
+@keyframes slideInLeft {
   from {left: 60px;}
   to {left: 0px;}
 }
 
-@keyframes slideInLeft {
+@keyframes slideInRight {
   from {right: 60px;}
   to {right: 0px;}
 }
@@ -296,27 +298,27 @@ hr {
 @keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
-  }
+}
   
-  @-moz-keyframes fadeIn {
+@-moz-keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
-  }
+}
   
-  @-webkit-keyframes fadeIn {
+@-webkit-keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
-  }
+}
   
-  @-o-keyframes fadeIn {
+@-o-keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
-  }
+}
   
-  @-ms-keyframes fadeIn {
+@-ms-keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
-  }
+}
 
 .textBox {
   width: 700px;
@@ -326,8 +328,8 @@ hr {
 }
 .convert-buttons {
   display: flex;
-  justify-content: space-around;
   flex-direction: column;
+  justify-content: space-around;
 }
 
 .song-display {
@@ -341,17 +343,18 @@ hr {
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    background-color: #414141;
-    padding: 15px;
-    margin: 15px;
     width: 850px;
+    margin: 15px;
+    padding: 15px;
+    background-color: #414141;
+
     & h2 {
-      font-size: 36px;
       margin: 20px;
+      font-size: 36px;
     }
     & p {
-      font-size: 18px;
       margin: 20px;
+      font-size: 18px;
     }
     #video {
       margin: 20px;
@@ -359,22 +362,21 @@ hr {
   }
 }
 
-
 footer {
   display: flex;
+  justify-content: space-around;
   margin-top: 50px;
   background: $card-background-color;
-  justify-content: space-around;
 
   p {
     margin: 60px 60px 30px 60px;
   }
   a {
-    text-decoration: none;
-    font-weight: bold;
-    cursor: pointer;
-    color: $text-color;
     margin: 60px 60px 30px 60px;
+    color: $text-color;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
   }
   a:hover {
     color: rgb(255, 255, 255);
