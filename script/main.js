@@ -34,7 +34,7 @@ function getSong(searchWords, key) {
                 songArr.push(data.response.docs[i]);
             }
 
-            // kallar på funktion som printar ut sökresultat
+            // printar ut sökresultat som länkar
             printSongResults(songArr, key, length);
         })
         .catch(function (error) {
