@@ -48,6 +48,7 @@ hr {
     background-color: rgb(52, 119, 110);
     border: none;
     border-radius: 10px;
+    font-weight: bold;
     height: 35px;
     width: 115px;
     margin: 15px;
@@ -69,10 +70,16 @@ hr {
     margin: 15px;
     height: 35px;
     font-size: 18px;
+    font-weight: bold;
     padding: 10px;
-  }
-  input:focus {
-    outline: none;
+    color: $text-color;
+
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: $text-color;
+    }
   }
 
   &__functions {
@@ -118,9 +125,6 @@ hr {
         outline: none;
       }
     }
-
-    
-
     &__index {
       position: relative;
       animation: slideInLeft 1s;
@@ -135,14 +139,17 @@ hr {
     flex-direction: column;
     align-items: center;
     margin: 60px 0px 0px 0px;
-    background: $card-background-color;
     padding: 10px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
     min-width: 860px;
     height: 450px;
+    border: 20px solid rgb(78, 78, 78);
+    background: linear-gradient(-45deg, rgba(131, 115, 113, 0.8), rgba(129, 119, 119, 0.8), rgba(126, 141, 140, 0.8), rgba(96, 122, 118, 0.8));
+	  background-size: 600% 600%;
+	  animation: gradient 4s ease-in-out infinite;
 
     button {
-      background-color: rgb(52, 119, 110);
+      background-color: rgb(45, 102, 94);
       border: none;
       border-radius: 10px;
       height: 35px;
@@ -262,6 +269,19 @@ hr {
     }
   }
 }
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 
 @keyframes slideInRight {
   from {left: 60px;}
