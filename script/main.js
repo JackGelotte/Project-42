@@ -9,12 +9,12 @@ window.onload = function () {
         document.getElementById('lyrics').innerText = "";
         const input = document.getElementById('searchBar').value;
         const searchWords = input.split(' ').join('%20');
-        getSong(searchWords, key);
+        getSongs(searchWords, key);
 
     }
 }
 
-function getSong(searchWords, key) {
+function getSongs(searchWords, key) {
     fetch('https://api.vagalume.com.br/search.excerpt?q=' + searchWords + '&limit=5&apikey=' + key)
         .then(function (response) {
             if (response.ok) {

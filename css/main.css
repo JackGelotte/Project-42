@@ -165,6 +165,8 @@ hr {
   border: none;
   border-radius: 60px 0px 0px 60px;
   background-color: rgba(165, 165, 165, 0.233);
+  -webkit-box-shadow: 0 1px 1px rgba(119, 59, 55, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1px 1px rgba(119, 59, 55, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
 }
 
 .main__functions__knappy {
@@ -182,8 +184,8 @@ hr {
   width: 150px;
   border: none;
   border-radius: 60px 0px 0px 60px;
-  -webkit-box-shadow: inset 1px 1px 5px 1px rgba(64, 145, 134, 0.6), 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: inset 1px 1px 5px 1px rgba(64, 145, 134, 0.6), 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: inset 1px 1px 5px 1px rgba(64, 145, 134, 0.6);
+          box-shadow: inset 1px 1px 5px 1px rgba(64, 145, 134, 0.6);
   background-color: rgba(52, 119, 110, 0.795);
   color: #cfcfcf;
   font-size: 30px;
@@ -356,6 +358,8 @@ hr {
   border: none;
   border-radius: 0px 60px 60px 0px;
   background-color: rgba(165, 165, 165, 0.233);
+  -webkit-box-shadow: 0 1px 1px rgba(119, 59, 55, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1px 1px rgba(119, 59, 55, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
 }
 
 .main__nav__knappy {
@@ -373,8 +377,8 @@ hr {
   width: 150px;
   border: none;
   border-radius: 0px 60px 60px 0px;
-  -webkit-box-shadow: inset 1px 1px 5px 1px rgba(150, 84, 79, 0.6), 0 1px 1px rgba(119, 59, 55, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: inset 1px 1px 5px 1px rgba(150, 84, 79, 0.6), 0 1px 1px rgba(119, 59, 55, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: inset 1px 1px 5px 1px rgba(150, 84, 79, 0.6);
+          box-shadow: inset 1px 1px 5px 1px rgba(150, 84, 79, 0.6);
   background-color: #773b37;
   color: #cfcfcf;
   font-size: 30px;
@@ -523,6 +527,8 @@ hr {
   margin: 15px;
   padding: 15px;
   background-color: #414141;
+  -webkit-box-shadow: 0 1px 1px rgba(119, 59, 55, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1px 1px rgba(119, 59, 55, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
 }
 
 .song-display__lyrics-container h2 {
