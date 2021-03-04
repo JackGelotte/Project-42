@@ -26,6 +26,13 @@ window.addEventListener('mousemove', function (event) {
     mouse.y = event.y;
 })
 
+window.addEventListener('resize', function () {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    init();
+})
+
 
 function Circle(x, y, dx, dy, radius) {
     this.x = x;
@@ -52,7 +59,7 @@ function Circle(x, y, dx, dy, radius) {
         this.y += this.dy;
 
         // mouse interaction
-        if (mouse.x - this.x < 70 && mouse.x - this.x > -70 && mouse.y - this.y < 70 && mouse.y - this.y > -70) {
+        if (mouse.x - this.x < 80 && mouse.x - this.x > -80 && mouse.y - this.y < 80 && mouse.y - this.y > -80) {
             if (this.radius < maxRadius) {
                 this.radius += 1;
             }
@@ -67,19 +74,22 @@ function Circle(x, y, dx, dy, radius) {
 }
 
 
-
 let circleArray = [];
-for (let i = 0; i < 800; i++) {
 
-    let radius = Math.random() * 5 + 1;
-    let x = Math.random() * (innerWidth - radius * 2) + radius;
-    let y = Math.random() * (innerHeight - radius * 2) + radius;
-    let dx = (Math.random() - 0.5) * 2;
-    let dy = (Math.random() - 0.5) * 2;
+function init() {
 
-    circleArray.push(new Circle(x, y, dx, dy, radius));
+    circleArray = [];
+    for (let i = 0; i < 900; i++) {
+
+        let radius = Math.random() * 6 + 2;
+        let x = Math.random() * (innerWidth - radius * 2) + radius;
+        let y = Math.random() * (innerHeight - radius * 2) + radius;
+        let dx = (Math.random() - 0.5) * 1;
+        let dy = (Math.random() - 0.5) * 1;
+
+        circleArray.push(new Circle(x, y, dx, dy, radius));
+    }
 }
-
 
 function animate() {
     requestAnimationFrame(animate);
@@ -91,4 +101,5 @@ function animate() {
     }
 }
 
+init();
 animate();
