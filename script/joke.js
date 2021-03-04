@@ -109,7 +109,7 @@ logoPlay.addEventListener('click', play);
 progPlay.addEventListener('click', play);
 function play() {
     let audio = document.createElement("audio");
-    audio.src = "/media/risitas-sound.mp3";
+    audio.src = "./media/risitas-sound.mp3";
     audio.volume = 0.3;
     audio.play();
 }
