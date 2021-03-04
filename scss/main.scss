@@ -389,14 +389,35 @@ hr {
       margin: 20px;
       font-size: 36px;
     }
+
     & p {
       margin: 20px;
       font-size: 18px;
     }
+
     #video {
+      display: none;
       margin: 20px;
     }
+    
+    #video-replace {
+      display: none;
+      width: 400px;
+      height: 250px;
+      background-color: $main-background-color;
+    }
+    
+    #video-replace p {
+      font-size: 28px;
+      color: darkred;
+    }
   }
+}
+
+#error-msg {
+  visibility: hidden;
+  font-weight: bold;
+  color: darkred;
 }
 
 footer {

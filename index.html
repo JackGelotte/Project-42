@@ -27,6 +27,7 @@
         </button>
       </div>
       <div class="main__content__search-result">
+        <p id="error-msg"></p>
         <div class="main__content__search-result__title-links" id="title-links">
         </div>
       </div>
@@ -38,9 +39,12 @@
   <div class="song-display">
     <div class="song-display__lyrics-container" id="lyrics-container">
       <h2 id="search-title"></h2>
-      <object width="420" height="315" data="" id="video" frameborder="0" gesture="media" allow="encrypted-media"
+      <object width="420" height="315" data="" id="video" frameborder="3" gesture="media" allow="encrypted-media"
         allowfullscreen="true" allow="autoplay">
       </object>
+      <div id="video-replace">
+        <p>Sorry, could not find a video that matched your search.</p>
+      </div>
       <p id="lyrics">
       </p>
     </div>
