@@ -22,16 +22,18 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 })
 
+// Hämtar random skämt
 // https://v2.jokeapi.dev/
 async function jokeApi(category) {
     let baseURL = "https://v2.jokeapi.dev";
     let categories = [category];
     let params = ["idRange=0-100"];
+    // Detta gör URL beroende på vad för categori som klickas in av användaren (categories.join behövs inte i detta fall, men ville ha kvar utifall jag ville ändra till fler alternativ)
     let response = await fetch(`${baseURL}/joke/${categories.join(",")}?${params.join("&")}`)
     let textB = document.querySelector('#textBox');
     if (response.ok) {
         let json = await response.json();
-
+        // Detta är beroende på om det är ett single skämt eller ett med setup och delivery
         if (json.type == "single") {
             textB.innerText = (json.joke);
         }
@@ -43,7 +45,7 @@ async function jokeApi(category) {
 }
 
 
-
+// Hämtar random Chuck Norris skämt
 // https://api.chucknorris.io/
 async function chuckNorris() {
     let response = await fetch(`https://api.chucknorris.io/jokes/random`)
@@ -51,15 +53,17 @@ async function chuckNorris() {
     let img = document.querySelector('#wat');
     if (response.ok) {
         let json = await response.json();
+        // En Norris ikon visas
         img.src = json.icon_url
         textB.innerText = json.value;
 
+        // Ett click event på ikonen
         img.addEventListener('click', chuckList, { once: true });
     }
 }
 
 
-
+// Kategorier och dropdown för Chuck Norris skämten
 async function chuckList() {
     let response = await fetch(`https://api.chucknorris.io/jokes/categories`);
 
@@ -67,11 +71,11 @@ async function chuckList() {
         let json = await response.json();
         let chuckBox = document.querySelector('#chuckBox');
         console.log(json);
-
+        // Skapar dropdown
         let select = document.createElement('select');
         chuckBox.append(select);
         let options = json;
-
+        // Lägger in alla options i dropdown
         for (let i = 0; i < options.length; i++) {
             let opt = options[i];
             let el = document.createElement('option');
@@ -79,6 +83,7 @@ async function chuckList() {
             el.value = opt;
             select.add(el);
         }
+        // Kör en fetch på den kategori som användaren valt
         select.addEventListener('change', async () => {
             let e = document.querySelector('select');
             let value = e.options[e.selectedIndex].value;
@@ -96,7 +101,7 @@ async function chuckList() {
 
 
 
-
+// Detta var ett alternativ till lyric fetch.
 // om vi behöver
 /* async function getLyric() {
     const key = '4294483c1fa9e154b8920e88d4e076a4';
