@@ -99,6 +99,17 @@ async function chuckList() {
     }
 }
 
+let progPlay = document.querySelector('#Programming');
+let logoPlay = document.querySelector('#risitas');
+logoPlay.addEventListener('click', play);
+progPlay.addEventListener('click', play);
+function play() {
+    let audio = document.createElement("audio");
+    audio.src = "/media/risitas-sound.mp3";
+    audio.volume = 0.2;
+    audio.play();
+}
+
 
 
 // Detta var ett alternativ till lyric fetch.
