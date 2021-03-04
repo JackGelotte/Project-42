@@ -36,9 +36,7 @@ body {
   }
   &__stuff {
     text-decoration: none;
-    &:visited {
-      color: $text-color;
-    }
+    color: $text-color;
   }
 }
 

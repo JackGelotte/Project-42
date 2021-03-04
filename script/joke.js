@@ -104,6 +104,7 @@ async function chuckList() {
     }
 }
 
+// Förhoppningsvis har du redan sett vad detta gör :D
 let progPlay = document.querySelector('#Programming');
 let logoPlay = document.querySelector('#risitas');
 logoPlay.style.cursor = "help";

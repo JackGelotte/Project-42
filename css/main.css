@@ -72,9 +72,6 @@ body {
 
 .header__stuff {
   text-decoration: none;
-}
-
-.header__stuff:visited {
   color: #cfcfcf;
 }
 
