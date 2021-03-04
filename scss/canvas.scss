@@ -1,0 +1,16 @@
+@import "globals";
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: -25px;
+  font-size: 30px;
+  color: rgba(207, 207, 207, 0.1);
+  text-decoration: none;
+  :visited {
+    text-decoration: none;
+    color: rgba(207, 207, 207, 0.1);
+  }
+}

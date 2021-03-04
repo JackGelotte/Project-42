@@ -34,6 +34,12 @@ body {
     align-self: center;
     font-size: 48px;
   }
+  &__stuff {
+    text-decoration: none;
+    &:visited {
+      color: $text-color;
+    }
+  }
 }
 
 hr {
@@ -54,7 +60,7 @@ hr {
     background-color: rgb(52, 119, 110);
     color: $text-color;
     font-size: 18px;
-    font-weight: bold;    
+    font-weight: bold;
   }
 
   button:hover {
@@ -76,7 +82,7 @@ hr {
     color: $text-color;
     font-size: 18px;
     font-weight: bold;
-    
+
     &:focus {
       outline: none;
     }
@@ -96,8 +102,8 @@ hr {
     border: none;
     border-radius: 60px 0px 0px 60px;
     background-color: rgba(165, 165, 165, 0.233);
-    box-shadow: 0 1px 1px rgba(119, 59, 55, 0.16), 
-                0 3px 10px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 1px rgba(119, 59, 55, 0.16),
+      0 3px 10px 0 rgba(0, 0, 0, 0.15);
 
     &__knappy {
       position: relative;
@@ -122,9 +128,8 @@ hr {
 
       &:hover {
         background-color: rgba(44, 102, 94, 0.9);
-        box-shadow: inset 1px 1px 5px 1px rgba(25, 56, 52, 0.6), 
-                    0 1px 1px rgba(0, 0, 0, 0.16), 
-                    0 3px 10px 0 rgba(0, 0, 0, 0.15);
+        box-shadow: inset 1px 1px 5px 1px rgba(25, 56, 52, 0.6),
+          0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
         cursor: pointer;
       }
 
@@ -144,10 +149,17 @@ hr {
     padding: 10px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
     border: 20px solid rgb(78, 78, 78);
-    background: linear-gradient(-45deg, rgba(131, 115, 113, 0.8), rgba(129, 119, 119, 0.8), rgba(126, 141, 140, 0.8), rgba(96, 122, 118, 0.8));
-    box-shadow: inset 1px 1px 3px 2px rgba(131, 131, 131, 0.6), 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
-	  background-size: 500% 500%;
-	  animation: gradient 3s ease-in-out infinite;
+    background: linear-gradient(
+      -45deg,
+      rgba(131, 115, 113, 0.8),
+      rgba(129, 119, 119, 0.8),
+      rgba(126, 141, 140, 0.8),
+      rgba(96, 122, 118, 0.8)
+    );
+    box-shadow: inset 1px 1px 3px 2px rgba(131, 131, 131, 0.6),
+      0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+    background-size: 500% 500%;
+    animation: gradient 3s ease-in-out infinite;
 
     button {
       height: 35px;
@@ -161,9 +173,8 @@ hr {
     }
     button:hover {
       border: none;
-      box-shadow: inset 0 0 3px 0 rgb(37, 37, 37), 
-                  0 0 3px 1px rgb(20, 20, 20);
-                  background-color: transparent;
+      box-shadow: inset 0 0 3px 0 rgb(37, 37, 37), 0 0 3px 1px rgb(20, 20, 20);
+      background-color: transparent;
       cursor: pointer;
     }
     button:focus {
@@ -235,8 +246,8 @@ hr {
     border: none;
     border-radius: 0px 60px 60px 0px;
     background-color: rgba(165, 165, 165, 0.233);
-    box-shadow: 0 1px 1px rgba(119, 59, 55, 0.16), 
-                0 3px 10px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 1px rgba(119, 59, 55, 0.16),
+      0 3px 10px 0 rgba(0, 0, 0, 0.15);
 
     &__knappy {
       position: relative;
@@ -248,7 +259,7 @@ hr {
       border: none;
       border-radius: 0px 60px 60px 0px;
       box-shadow: inset 1px 1px 5px 1px rgba(161, 93, 88, 0.6);
-      background-color: rgb(119, 59, 55, 0.9);
+      background-color: rgba(119, 59, 55, 0.9);
       color: $text-color;
       font-size: 30px;
       font-weight: bold;
@@ -264,8 +275,7 @@ hr {
         border-radius: 0px 60px 60px 0px;
         background-color: rgba(107, 55, 50, 0.9);
         box-shadow: inset 1px 1px 5px 1px rgba(82, 36, 33, 0.6),
-                    0 1px 1px rgba(0, 0, 0, 0.16), 
-                    0 3px 10px 0 rgba(0, 0, 0, 0.15);
+          0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15);
         cursor: pointer;
       }
 
@@ -277,50 +287,78 @@ hr {
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes slideInLeft {
-  from {left: 60px;}
-  to {left: 0px;}
+  from {
+    left: 60px;
+  }
+  to {
+    left: 0px;
+  }
 }
 
 @keyframes slideInRight {
-  from {right: 60px;}
-  to {right: 0px;}
+  from {
+    right: 60px;
+  }
+  to {
+    right: 0px;
+  }
 }
 
 @keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-  
+
 @-moz-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-  
+
 @-webkit-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-  
+
 @-o-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-  
+
 @-ms-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .textBox {
@@ -350,8 +388,8 @@ hr {
     margin: 15px;
     padding: 15px;
     background-color: #414141;
-    box-shadow: 0 1px 1px rgba(119, 59, 55, 0.16), 
-                0 3px 10px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 1px rgba(119, 59, 55, 0.16),
+      0 3px 10px 0 rgba(0, 0, 0, 0.15);
 
     & h2 {
       margin: 20px;
@@ -367,14 +405,14 @@ hr {
       display: none;
       margin: 20px;
     }
-    
+
     #video-replace {
       display: none;
       width: 400px;
       height: 250px;
       background-color: $main-background-color;
     }
-    
+
     #video-replace p {
       font-size: 28px;
       color: darkred;

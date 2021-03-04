@@ -58,7 +58,9 @@ async function chuckNorris() {
     if (response.ok) {
         let json = await response.json();
         // En Norris ikon visas
-        img.src = json.icon_url
+        img.src = json.icon_url;
+        img.style.cursor = "pointer";
+
         textB.innerText = json.value;
 
         // Ett click event på ikonen
@@ -97,7 +99,6 @@ async function chuckList() {
                 let jsonC = await responseC.json();
                 let textB = document.querySelector('#textBox');
                 textB.innerText = jsonC.value;
-                console.log(jsonC.value)
             }
         })
     }
@@ -105,6 +106,7 @@ async function chuckList() {
 
 let progPlay = document.querySelector('#Programming');
 let logoPlay = document.querySelector('#risitas');
+logoPlay.style.cursor = "help";
 logoPlay.addEventListener('click', play);
 progPlay.addEventListener('click', play);
 function play() {
