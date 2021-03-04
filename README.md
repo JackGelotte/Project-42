@@ -5,7 +5,7 @@ https://jackgelotte.github.io/Project-42/
 Idé:
 På första sidan ska det finnas en sökfunktion där användaren kan söka efter artist, låt-titel eller del av en låt-text.
 Sökfuntionen ger då förslag på låtar som matchar sökningen.
-När användaren valt låt skrivs texten ut i en ruta, 
+När användaren valt låt skrivs texten ut i en ruta,
 samt en matchande youtube-video embeddas i en ruta.
 
 Användaren kan också välja att få skämt utskrivna i rutan.
@@ -21,4 +21,5 @@ https://developers.google.com/youtube/v3/getting-started
 
 Joke API;
 https://v2.jokeapi.dev/#url-parameters
+Chuck Norris API:
 https://api.chucknorris.io/#!
