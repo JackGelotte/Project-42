@@ -542,7 +542,26 @@ hr {
 }
 
 .song-display__lyrics-container #video {
+  display: none;
   margin: 20px;
+}
+
+.song-display__lyrics-container #video-replace {
+  display: none;
+  width: 400px;
+  height: 250px;
+  background-color: #222222;
+}
+
+.song-display__lyrics-container #video-replace p {
+  font-size: 28px;
+  color: darkred;
+}
+
+#error-msg {
+  visibility: hidden;
+  font-weight: bold;
+  color: darkred;
 }
 
 footer {
