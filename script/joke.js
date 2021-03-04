@@ -5,6 +5,10 @@ import { transition } from './transitions.js'
 
 window.onload = function () {
     transition();
+    // style nav button as "active" page
+    const activeButton = document.getElementById('active-btn');
+    activeButton.style.backgroundColor = 'rgba(107, 55, 50, 0.9)';
+    activeButton.style.boxShadow = 'inset 1px 1px 5px 1px rgba(82, 36, 33, 0.6), 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15)';
 }
 
 window.addEventListener('DOMContentLoaded', () => {

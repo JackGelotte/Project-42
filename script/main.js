@@ -3,6 +3,11 @@ import { transition } from './transitions.js';
 
 window.onload = function () {
     transition();
+    // style nav button as "active" page
+    const activeButton = document.getElementById('active-btn');
+    activeButton.style.backgroundColor = 'rgba(39, 90, 83, 0.9)';
+    activeButton.style.boxShadow = 'inset 1px 1px 5px 1px rgba(25, 56, 52, 0.6), 0 1px 1px rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.15)';
+
     const searchBtn = document.getElementById('searchBtn');
     const key = '4294483c1fa9e154b8920e88d4e076a4';
     searchBtn.onclick = function () {
@@ -85,6 +90,7 @@ function printSongResults(songArr, key, length) {
 function embedVideo(band, song) {
     const youtubeKey = 'AIzaSyAMElWV5YhXPfB9z_DVSlgYTN_GM-CzXrk';
     const video = document.getElementById('video');
+    // en replace box som visas om video inte hittas
     const videoReplace = document.getElementById('video-replace');
 
     fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=' + band + song + '&type=video&videoEmbeddable=true&key=' + youtubeKey)
@@ -102,6 +108,7 @@ function embedVideo(band, song) {
             video.data = 'https://www.youtube.com/embed/' + videoId;
         })
         .catch(function (error) {
+            // göm video och visa felmeddelande-box
             video.style.display = 'none';
             videoReplace.style.display = 'block';
             console.error(error.message);
